@@ -43,7 +43,7 @@ func main() {
 	flag.StringVar(&opts.headersFile, "h", "", "file with custom headers")
 	flag.StringVar(&opts.cookie, "cookie", "", "set cookies, ex. -cookie \"session=hacker\"")
 	flag.StringVar(&opts.proxy, "proxy", "", "set proxy for requests, -proxy \"http://192.168.0.241:8082\"")
-	flag.IntVar(&opts.concurrency, "c", 10, "set concurrency")
+	flag.IntVar(&opts.concurrency, "c", 5, "set concurrency")
 	flag.BoolVar(&opts.version, "v", false, "version")
 	flag.IntVar(&opts.rate, "rate", 0, "max rate for requests")
 	flag.Parse()
