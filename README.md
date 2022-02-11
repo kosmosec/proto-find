@@ -46,7 +46,7 @@ Or you can clone the respository and build it manually:
 ## Simple case
 Run
 ```bash
-csprotopollution -u ./urls -p ./payloads.txt -js window.elo -cookie "JSESSIONID=test;hello=world" -proxy "http://IP:PORT" -c 5
+proto-find -u ./urls -p ./payloads.txt -js window.elo -cookie "JSESSIONID=test;hello=world" -proxy "http://IP:PORT" -c 5
 ```
 Output
 ```text
@@ -60,7 +60,7 @@ Vulnerable target http://<TARGET>/?name=test&work=hard&coffee=yes&constructor[pr
 
 Run 
 ```bash
-cat urls | csprotopollution -p ./payloads.txt -js window.elo -cookie "JSESSIONID=test;hello=world" -proxy "http://IP:PORT" -c 5
+cat urls | proto-find -p ./payloads.txt -js window.elo -cookie "JSESSIONID=test;hello=world" -proxy "http://IP:PORT" -c 5
 ```
 
 ## With custom headers
@@ -71,7 +71,7 @@ Auth: custom
 ```
 Run
 ```bash
-csprotopollution -u ./urls -p ./payloads.txt -h ./headers -js window.elo -cookie "JSESSIONID=test;hello=world"  -proxy "http://IP:PORT" -c 5
+proto-find -u ./urls -p ./payloads.txt -h ./headers -js window.elo -cookie "JSESSIONID=test;hello=world"  -proxy "http://IP:PORT" -c 5
 ```
 
 
