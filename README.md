@@ -73,3 +73,8 @@ Run
 ```bash
 csprotopollution -u ./urls -p ./payloads.txt -h ./headers -js window.elo -cookie "JSESSIONID=test;hello=world"  -proxy "http://IP:PORT" -c 5
 ```
+
+
+# Credits
+* [Tomnomnom](https://github.com/tomnomnom) 
+* [page-fetch](https://github.com/detectify/page-fetch)
