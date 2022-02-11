@@ -1,0 +1,15 @@
+#constructor[prototype][elo]=melo
+?constructor[prototype][elo]=melo
+&constructor[prototype][elo]=melo
+?constructor.prototype.elo=melo
+&constructor.prototype.elo=melo
+#constructor.prototype.elo=melo
+&__proto__[elo]=melo
+#__proto__[elo]=melo
+?__proto__[elo]=melo
+?__proto__[elo]={"json":"value"}
+&__proto__[elo]={"json":"value"}
+#__proto__[elo]={"json":"value"}
+?__proto__.elo=melo
+&__proto__.elo=melo
+#__proto__.elo=melo
