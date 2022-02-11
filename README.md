@@ -48,7 +48,7 @@ You can get the proto-find help output by running `proto-find -help`:
 ▶ proto-find -help
 Usage of proto-find:
   -c int
-    	set concurrency (default 10)
+    	set concurrency (default 5)
   -cookie string
     	set cookies, ex. -cookie "session=hacker"
   -h string
@@ -69,11 +69,19 @@ Usage of proto-find:
 # Usage
 ## The concurrency (-c) 5 is the best for performance on regular computers. 
 
+----
+
 ## Simple case
 Run
 ```bash
-proto-find -u ./urls -p ./payloads.txt -js window.elo -cookie "JSESSIONID=test;hello=world" -proxy "http://IP:PORT" -c 5
+proto-find -u ./urls -p ./payloads.txt -js window.elo
 ```
+
+Run
+```bash
+cat urls | proto-find -p ./payloads.txt -js window.elo
+```
+
 Output
 ```text
 Vulnerable target http://<TARGET>/?name=test&work=hard&coffee=yes&__proto__[elo]={"json":"value"}
@@ -82,12 +90,12 @@ Vulnerable target http://<TARGET>/?name=test&work=hard&coffee=yes&constructor[pr
 
 ```
 
-----
-
-Run 
+## With cookies and proxy
+Run
 ```bash
-cat urls | proto-find -p ./payloads.txt -js window.elo -cookie "JSESSIONID=test;hello=world" -proxy "http://IP:PORT" -c 5
+proto-find -u ./urls -p ./payloads.txt -js window.elo -cookie "JSESSIONID=test;hello=world" -proxy "http://IP:PORT" -c 5
 ```
+
 
 ## With custom headers
 Copy headers from Burp Suite and paste to the file, e.x. 
