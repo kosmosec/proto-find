@@ -40,6 +40,32 @@ Or you can clone the respository and build it manually:
 ▶ go install
 ```
 
+# Options
+
+You can get the proto-find help output by running `proto-find -help`:
+
+```
+▶ proto-find -help
+Usage of proto-find:
+  -c int
+    	set concurrency (default 10)
+  -cookie string
+    	set cookies, ex. -cookie "session=hacker"
+  -h string
+    	file with custom headers
+  -js string
+    	JS script which check if prototype pollution exists
+  -p string
+    	file with client side prototype pollution payloads
+  -proxy string
+    	set proxy for requests, -proxy "http://<IP>:<PORT>"
+  -rate int
+    	max rate for requests
+  -u string
+    	file with URLs to scan
+  -v	version
+```
+
 # Usage
 ## The concurrency (-c) 5 is the best for performance on regular computers. 
 
