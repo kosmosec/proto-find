@@ -33,7 +33,7 @@ type options struct {
 
 func main() {
 
-	version := "0.1"
+	version := "1.0"
 
 	opts := options{}
 
